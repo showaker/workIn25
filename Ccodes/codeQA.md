@@ -56,6 +56,23 @@ for (int i = 0; i < len; i++) {   // ✅ 正确！
 
 这里用指针p表示数组元素的核心公式为 `*( *(p + i) + j ) = x[i][j]`
 
+## switch语句
+```
+int i ,sum= 0;
+
+for(i = 0; i < 12; i++)
+{
+
+    switch(i)
+    {
+    case 0: case 1: case 3: case 5: sum++;
+    default:continue;
+    case 4: break;
+    }
+    break;
+}
+```
+执行后 `sum=3`
 
 
 
