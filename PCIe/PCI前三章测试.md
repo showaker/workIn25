@@ -34,91 +34,92 @@
     C) 负责产生系统时钟的设备
     D) 总线上的根节点
 
-6.  PCI总线的地址线和数据线是分开的，这种设计被称为？
+6.  PCI总线的地址线和数据线是分开的，这种设计被称为？——错误——
     A) 复用总线 (Multiplexed Bus)
     B) 分离式总线 (Split Transaction Bus)
     C) 非复用总线 (Non-Multiplexed Bus)
     D) 串行总线 (Serial Bus)
+    
 
-7.  资料中提到的“Clock”（时钟）在PCI总线中是如何处理的？
+8.  资料中提到的“Clock”（时钟）在PCI总线中是如何处理的？
     A) 时钟信息嵌入在数据流中
     B) 由一个独立的时钟线（CLK）提供全局同步时钟
     C) 由设备自带晶振提供
     D) 由操作系统软件模拟
 
-8.  当PCI总线上的主控设备完成一次数据传输后，它会释放什么？
+9.  当PCI总线上的主控设备完成一次数据传输后，它会释放什么？
     A) 配置空间
     B) 总线使用权 (Bus Grant)
     C) 内存地址
     D) 电源
 
-9.  以下哪种机制用于解决PCI总线上的设备冲突，确保同一时刻只有一个主控设备在使用总线？
+10.  以下哪种机制用于解决PCI总线上的设备冲突，确保同一时刻只有一个主控设备在使用总线？
     A) ACK/NAK 重传
     B) 总线仲裁 (Bus Arbitration)
     C) 数据加扰 (Scrambling)
     D) 流量控制 (Flow Control)
 
-10. 资料中“Address Phase”（地址相）和“Data Phase”（数据相）是PCI总线事务的哪一部分？
+11. 资料中“Address Phase”（地址相）和“Data Phase”（数据相）是PCI总线事务的哪一部分？
     A) 事务层包的头部
     B) 一次总线访问的两个主要阶段
     C) 配置空间的两个区域
     D) 电源管理状态
 
-11. 当一个PCI设备需要向CPU报告事件时，会使用什么信号？
+12. 当一个PCI设备需要向CPU报告事件时，会使用什么信号？
     A) INTA#, INTB#, INTC#, INTD#
     B) CLK
     C) AD[31:0]
     D) FRAME#
 
-12. 在PCI总线的地址相，地址和命令信息是通过哪条总线传输的？
+13. 在PCI总线的地址相，地址和命令信息是通过哪条总线传输的？
     A) 数据总线 (AD[31:0])
     B) 命令/字节使能总线 (C/BE#[3:0])
     C) 帧信号 (FRAME#)
     D) 设备选择信号 (DEVSEL#)
 
-13. 以下哪个信号用于指示当前总线事务的开始和结束？
+14. 以下哪个信号用于指示当前总线事务的开始和结束？
     A) CLK
     B) FRAME#
     C) IRDY#
     D) TRDY#
 
-14. 资料中提到的“BAR”（Base Address Register）的主要作用是什么？
+15. 资料中提到的“BAR”（Base Address Register）的主要作用是什么？
     A) 存储设备的厂商ID
     B) 告诉系统设备需要多大的内存或I/O地址空间，以及该空间的类型
     C) 控制设备的电源状态
     D) 存储中断向量
 
-15. 以下哪种总线操作用于从内存或I/O空间读取数据？
+16. 以下哪种总线操作用于从内存或I/O空间读取数据？
     A) Memory Write
     B) Memory Read
     C) Configuration Write
     D) Interrupt Acknowledge
 
-16. 以下哪种总线操作用于向内存或I/O空间写入数据？
+17. 以下哪种总线操作用于向内存或I/O空间写入数据？
     A) Memory Write
     B) Memory Read
     C) Configuration Read
     D) Special Cycle
 
-17. 当系统需要读取PCI设备的配置信息时，会使用哪种总线操作？
+18. 当系统需要读取PCI设备的配置信息时，会使用哪种总线操作？
     A) Configuration Read
     B) Configuration Write
     C) Memory Read
     D) I/O Write
 
-18. 在PCI总线中，负责连接CPU和内存子系统到PCI总线的组件通常被称为？
+19. 在PCI总线中，负责连接CPU和内存子系统到PCI总线的组件通常被称为？
     A) PCI Endpoint
     B) PCI Bridge
     C) PCI Root Complex
     D) PCI Switch
 
-19. PCI Bridge（PCI桥）的主要功能是什么？
+20. PCI Bridge（PCI桥）的主要功能是什么？
     A) 将一个PCIe链路转换为PCI总线
     B) 连接两个PCI总线段，隔离电气负载，并进行地址转换
     C) 为设备提供电源管理
     D) 生成系统时钟
 
-20. 资料中“Scrambling”（加扰）技术在PCI总线中是否存在或常用？
+21. 资料中“Scrambling”（加扰）技术在PCI总线中是否存在或常用？
     A) 是，用于加密数据
     B) 是，用于减少EMI
     C) 否，这不是PCI总线的标准技术
@@ -258,6 +259,8 @@
 
 6.  **答案：C) 非复用总线 (Non-Multiplexed Bus)**
     *   **原理与知识点**：在PCI总线中，地址和数据使用独立的总线（AD[31:0]在地址相传输地址，在数据相传输数据），这与地址/数据复用的总线不同。
+    *   修改——A
+    *   ✅ PCI总线采用的是地址/数据复用（Multiplexed Address/Data）架构，即地址和数据共享同一组信号线，分时传输。
 
 7.  **答案：B) 由一个独立的时钟线（CLK）提供全局同步时钟**
     *   **原理与知识点**：PCI总线是一个同步总线，所有操作都由一个全局的CLK信号同步。
