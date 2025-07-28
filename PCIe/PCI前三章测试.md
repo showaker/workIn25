@@ -34,7 +34,7 @@
     C) 负责产生系统时钟的设备
     D) 总线上的根节点
 
-6.  PCI总线的地址线和数据线是分开的，这种设计被称为？——错误——
+6.  PCI总线的地址线和数据线是分开的，这种设计被称为？
     A) 复用总线 (Multiplexed Bus)
     B) 分离式总线 (Split Transaction Bus)
     C) 非复用总线 (Non-Multiplexed Bus)
