@@ -36,7 +36,7 @@ public:
 };
 ```
 
-##左闭右开区间写法
+## 左闭右开区间写法
 ```
 class Solution {
     // lower_bound 返回最小的满足 nums[i] >= target 的下标 i
