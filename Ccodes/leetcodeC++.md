@@ -61,6 +61,27 @@ return (nums.back() - 1) * (nums[nums.size() - 2] - 1);
 
 ### vector 中最大元素
 
+```
+#include <iostream>
+#include <vector>
+#include <algorithm>  // std::max_element
+#include <iterator>   // std::begin, std::end
+
+int main() {
+    std::vector<int> vec = {3, 7, 2, 9, 1, 5};
+
+    // 使用 std::max_element 找到最大元素的迭代器
+    auto max_it = std::max_element(std::begin(vec), std::end(vec));
+
+    if (max_it != std::end(vec)) {
+        std::cout << "最大元素是: " << *max_it << std::endl;
+    } else {
+        std::cout << "vector为空" << std::endl;
+    }
+
+    return 0;
+}
+```
 
 
 ### find
@@ -383,6 +404,7 @@ static constexpr int DIRS[4][2] = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
 ### 顺时针90°旋转图像
 
 上下翻转然后沿主对角线翻转，得到顺时针90°的图像。
+
 
 
 
