@@ -55,6 +55,9 @@ int main() {
     } else {
         std::cout << "vector为空" << std::endl;
     }
+    
+    // 或者直接取值
+    int m = *max_element(nums.begin(), nums.end());
 
     return 0;
 }
